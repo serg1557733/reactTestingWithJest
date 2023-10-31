@@ -1,4 +1,5 @@
-import { screen, render, debug } from "@testing-library/react";
+import { screen, render } from "@testing-library/react";
+import userEvent from '@testing-library/user-event';
 
 import Search from "./Search";
 
@@ -31,11 +32,24 @@ describe('Search component', () => {
 
     })
 
-    it('custom placeholder' , () => {
-        
+    it('custom placeholder working correctly' , () => {
+        render(
+            <  Search value = "" onChange= {onChange} placeholder = 'find text..'/>);    
+        expect(screen.getByPlaceholderText(/find text/)).toBeInTheDocument();   
+
     })
 
+    it('onChange working' ,() => {
+        render(
+            <Search  value = "" onChange= {onChange} >
+                   Find: 
+            </Search >);  
 
-        
+        userEvent.type(screen.getByRole('textbox'), 'React');
 
+        expect(onChange).toHaveBeenCalledTimes(5);
+    } )
+
+
+    
 })
