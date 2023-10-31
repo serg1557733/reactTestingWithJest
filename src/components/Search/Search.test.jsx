@@ -59,7 +59,16 @@ describe('Search component', () => {
        // expect(screen.getByRole('label')).toHaveStyle('display: flex');
     })
 
+    it('search snapshot', () => {
 
+    const view = render( 
+    <Search  value = "" onChange= {onChange} >  
+    Find: 
+    </Search >);  
+
+        expect(view).toMatchSnapshot();
+
+    })
 
 
     
