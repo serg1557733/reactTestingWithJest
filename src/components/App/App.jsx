@@ -14,6 +14,7 @@ function App() {
 
   <div className="App">
       <List item = {data} />
+      <div> Add some text ...</div>
       <Search value = {search} onChange = {e =>setSearch(e.target.value)} >
         Find some...
       </Search>
