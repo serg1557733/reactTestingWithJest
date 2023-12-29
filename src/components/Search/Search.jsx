@@ -14,6 +14,7 @@ const Search = props => {
   return (
     <label className={classes.label}>
         {children}
+        <div> new div ...</div>
         <input 
         className={inputClass}
             type="text"
