@@ -15,9 +15,14 @@ function App() {
   <div className="App">
       <List item = {data} />
       <div> Add some text ...</div>
+      <p> Some other text for merging ... </p>
+
       <Search value = {search} onChange = {e =>setSearch(e.target.value)} >
         Find some...
       </Search>
+      <div> 
+        <a> New link</a>
+      </div>
     </div>
   );
 }

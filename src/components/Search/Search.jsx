@@ -22,6 +22,7 @@ const Search = props => {
             value={value}
             onChange={onChange}
          />
+         <p> Some tetx on page Search</p>
     </label>
   )
 }
