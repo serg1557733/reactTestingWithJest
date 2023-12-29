@@ -22,8 +22,8 @@ const Search = props => {
             value={value}
             onChange={onChange}
          />
-         <p> Some tetx on page Search</p>
-         <p> Some  new tetx on page Search on master Branch</p>
+         <p> Some text on page Search</p>
+         <p> Some new text on page Search on master newBranch</p>
 
     </label>
   )
